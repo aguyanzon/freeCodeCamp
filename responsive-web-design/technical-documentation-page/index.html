@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation Page</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+</head>
+<body>
+    <nav id="navbar">
+        <img src="https://cdn.worldvectorlogo.com/logos/python-5.svg"/>
+        <header class="titulo">Python Documentación</header>
+        <ul>
+            <li>
+                <a class="nav-link" href="#Introducción">Introducción</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Variables_y_tipos_de_datos">Variables y tipos de datos</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Listas">Listas</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Operadores_básicos">Operadores básicos</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Formato_de_texto">Formato de texto</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Operaciones_básicas_con_texto">Operaciones básicas con texto</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Condicionales">Condicionales</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Bucles">Bucles</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Funciones">Funciones</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Clases_y_objetos">Clases y objetos</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Diccionarios">Diccionarios</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Referencia">Referencia</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introducción">
+            <header>Introducción</header>
+            <article>
+                <p>Bienvenido al tutorial interactivo en español sobre Python.</p>
+                <p>Ya sea un programador experimentado o no, este sitio web está destinado a cualquiera que desee aprender el lenguaje de programación Python.</p>
+                <p>La idea de crear la versión en español es que este sitio esté a disposición de cualquier persona interesada sin que el idioma sea una barrera.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Variables_y_tipos_de_datos">
+            <header>Variables y tipos de datos</header>
+            <article>
+                <p>Python es completamente orientado a objetos, y no es "escrito estáticamente". No necesitas declarar variables o el tipo antes de usarlas. Cada variable en Python es un objeto y así cada objeto soporta las siguientes instrucciones:</p>
+                <p><strong>help(object)</strong> - Muestra información de cómo usar objetos.</p>
+                <p><strong>dir(object)</strong> - muestra la estructura interna del objeto - con sus metodos y miembros.</p>
+                <p>Este tutorial irá a través de algunos tipos básicos de variables.</p>
+                <h3>Números</h3>
+                <p>Python soporta dos tipos de números - enteros o integrales (integer) y números de punto flotante (float). (Tambien soporta números complejos, los cuales no se explicarán en este tutorial). </p>
+                <p>Para definir un integral, usa la siguiente sintaxis:</p>
+                <code>
+                    myint = 7
+                </code>
+                <p>Para definir un número de punto flotante, debes usar una de las siguientes notaciones:</p>
+                <code>
+                    midecimal = 7.0<br>
+                    midecimal = float(7)
+                </code>
+                <h3>Cadenas</h3>
+                <p>Las cadenas están definidas con comillas sencillas o compuestas.</p>
+                <code>
+                    micadena = 'Hola'<br>
+                    micadena = "Hola"
+                </code>
+                <p>La diferencia entre las dos es que usando doble comillas lo hace más fácil de incluir los apostofres (de lo contrario concluirá la cadena si se usa doble comillas)</p>
+                <code>    
+                    micadena = "No te preocupes de los 'apostofres' usando comillas dobles"
+                </code>
+                <p>Existen variaciones para definir cadenas de texto que hacen más sencillo incluir otros símbolos como un salto de línea, una contrabarra o caracteres Unicode.</p>
+                <p>Los operadores simples pueden ser ejecutados en números o cadenas:</p>
+                <code>
+                    uno = 1<br>
+                    dos = 2<br>
+                    tres = uno + dos<br><br>
+
+                    hola = "hola"<br>
+                    mundo = "mundo"<br>
+                    holamundo = hola + " " + mundo
+                </code>
+                <p>Se puede asignar a más de una variable simultaneamente en la misma línea, como se muestra aquí</p>
+                <code>
+                    a, b = 3, 4
+                </code>
+                <p>Mezclando operadores entre los numeros y cadenas que no son soportadas:</p>
+                <code>
+                    # Esto no funcionará!<br>
+                    print uno + dos + hola
+                </code>
+            </article>
+        </section>
+        <section class="main-section" id="Listas">
+            <header>Listas</header>
+            <article>
+                <p>Las listas son muy similares a los arreglos. Estas pueden contener cualquier tipo de variable y pueden soportar todas las variables que desees. Los elementos de la lista pueden ser iterados de manera simple ! (se explicará mas adelante en el tutorial) o accediendo a ellos via un indice basado en cero. Aquí hay un ejemplo de cómo crear una lista.</p>
+                <code>
+                    miLista = []<br>
+                    miLista.append(1)<br>
+                    miLista.append(2)<br>
+                    miLista.append(3)<br>
+                    print miLista[0] # imprime 1<br>
+                    print miLista[1] # imprime 2<br>
+                    print miLista[2] # imprime 3<br><br>
+
+                    # prints out 1,2,3<br>
+                    for x in miLista:<br>
+                    print(x)
+                </code>
+                <p>Accediendo a un indice que no exista generará un error.</p>
+                <code>
+                    miLista = [1,2,3]<br>
+                    print miLista[10]
+                </code>
+            </article>
+        </section>
+        <section class="main-section" id="Operadores_básicos">
+            <header>Operadores básicos</header>
+            <article>
+                <p>Esta sección explica un poco sobre cómo usar los operadores básicos en Python. </p>
+                <h3>Operadores Aritméticos</h3>
+                <p>Tal como cualquier otro lenguaje de programación, los operadores de suma, resta, multiplicación y división pueden ser usados con números.<br> </p>
+                <code>
+                    numeros = 1 + 2 * 3 / 4.0
+                </code>
+                <p>Intenta predecir cuál será la respuesta ¿Python sigue las ordenes de los operadores?</p>
+                <p>Otro operador disponible es el modulo (%), este regresa el integral remanente de una división. dividendo % divisor = remanente.</p>
+                <code>
+                    remanente = 11 % 3
+                </code>
+                <p>Usando dos símbolos de multiplicación (*) crea una relación de potencia.</p>
+                <code>
+                    cuadrado = 7 ** 2<br>
+                    cubico = 2 ** 3
+                </code>
+                <h3>Usando Operadores con Texto</h3>
+                <p>Python soporta unir texto usando el operador de adición:</p>
+                <code>
+                    holamundo = "hola" + " " + "mundo"
+                </code>
+                <p>Python también soporta multiplicar texto o cadenas para formar una cadena con una secuencia repetitiva:</p>
+                <code>
+                    muchosholas = "hola" * 10
+                </code>
+                <h3>Usar Operadores con listas</h3>
+                <p>Las listas pueden ser unidas con los operadores de adición:</p>
+                <code>
+                    numeros_pares = [2,4,6,8]<br>
+                    numeros_impares = [1,3,5,7]<br>
+                    numeros_todos = numeros_pares + numeros_impares
+                </code>
+                <p>Al igual que con los Strings, Python soporta la creación de nuevas listas, repitiendo una secuencia utilizando el operador multiplicación (*) :</p>
+                <code>
+                    print [1,2,3] * 3
+                </code>
+            </article>
+        </section>
+        <section class="main-section" id="Formato_de_texto">
+            <header>Formato de texto</header>
+            <article>
+                <p>Python usa un estilo de formato de cadenas parecido a C para crear nuevas cadenas de texto. El operador "%" es usado para dar este formato y fijar las variables encerradas en una "tupla" (una lista inmutable la cual no puede ser reasignada) juntos con una cadena con formato, que contiene el texto normal junto con "argumentos especificados", como los símbolos especiales "%s" y "%d". </p>
+                <p>Digamos que tienes una variable llamada "nombre" con tu nombre de usuario en ella y querrás darle un saludo al usuario.</p>
+                <code>
+                    # Esto imprime "Hola, Juan!"<br>
+                    nombre = "Juan"<br>
+                    print("Hola, %s!" % nombre)
+                </code>
+                <p>Para usar dos o más especificadores de argumento, usa un tupla (con parentesis):</p>
+                <code>
+                    # Esto imprime "John is 23 years old."<br>
+                    nombre = "John"<br>
+                    edad = 23<br>
+                    print("%s tiene %d años." % (nombre, edad))
+                </code>
+                <p>Cualquier objeto del cual no sea una cadena puede ser formateado usando el operador %s. La cadena que retorne de un método "repr" de ese objeto, será formateada como cadena, por ejemplo:</p>
+                <code>
+                    # Esto muestra lo siguiente: Una Lista: [1, 2, 3]<br>
+                    milista = [1,2,3]<br>
+                    print("Una lista: %s" % milista)
+                </code>
+                <p>Aquí hay algunos especificadores de argumentos básicos como debes saber:</p>
+                <code>
+                    %s - Cadena (O cualquier objeto, como los números al representarlos en una cadena de texto)<br>
+                    %d - Integrales<br>
+                    %f - Números de punto flotante<br>
+                    %.&lt;numero de digitos&gt;f - Números de punto flotante con una cantidad de números fijos a la derecha del punto.<br>
+                    %x/%X - Integral con representacion hex (minúscula/mayúscula)
+                </code>
+            </article>
+        </section>   
+        <section class="main-section" id="Operaciones_básicas_con_texto">
+            <header>Operaciones básicas con texto</header>
+            <article>
+                <p>Las cadenas son bits de texto; estas pueden ser definidas como cualquier cosa entre comillas:</p>
+                <code>
+                    unacadena = "Hola Mundo!"
+                </code>
+                <p>Como puedes ver, la primera cosa que aprendes es la de mostrar una simple oración. Esta oración es procesada por Python como una cadena. Sin embargo, en vez de imprimir la cadena inmediatamente, debemos explorar varias cosas que puedes hacerle.</p>
+                <code>
+                    print len(unacadena)
+                </code>
+                <p>Esta muestra 12, porque "Hola mundo!" es de 12 caracteres incluyendo puntuación y espacios.</p>
+                <code>
+                    print unacadena.index("o")
+                </code>
+                <p>Esto imprime 1, porque la ubicación de la primera letra que imprime, en este caso la letra "o" esta en el primer caracter a partir del primero. Nota que aunque hay dos "o" en la frase, este método solo reconocerá al primero.</p>
+                <p>Pero ¿Por qué no imprime 2? ¿No es "o" el segundo caracter de la cadena? Para hacer las cosas mas sencillas, Python (y mucho de los otros lenguajes de programación) comienzan con 0 en vez de 1. Asi que el lugar de "o" es 1.</p>
+                <code>
+                    print unacadena.count("l")
+                </code>
+                <p>Para quienes estén usando fuentes especiales, tal como la 'l' minúscula, en vez del número uno. Este cuenta el número de eles en la cadena, así que debe mostrar 1.</p>
+                <code>
+                    print astring[3:7]
+                </code>
+                <p>Esto imprime una sección de la cadena, comenzando en el indice 3, y terminando en el 6. Pero ¿Por qué el 6 y no el 7? De nuevo, la mayoría de los lenguajes de programación hacen esto - facilita la forma de hacer matemáticas dentro de esos corchetes.</p>
+                <p>Si hay solamente un número entre los corchetes, devolverá el caracter que esté en ese índice. Si dejas en blanco el primer número pero mantienes los dos puntos, devolverá una porción desde el índice 0 hasta el número que quedó. Si dejas en blanco el segundo número, devolverá una porción desde el primer número hasta el final.</p>
+                <p>Incluso es posible poner números negativos en los corchetes. Son una forma sencilla de comenzar la cadena por el final en lugar de por el principio. De esta forma -3 significa "el tercer caracter desde el final".</p>
+                <code>
+                    print astring.upper()<br>
+                    print astring.lower()
+                </code>
+                <p>Esto muestra nuevas cadenas con todas las letras convertidas de mayúsculas a minúsculas respectivamente.</p>
+                <code>
+                    print astring.startswith("Hola")<br>
+                    print astring.endswith("asdfasdfasdf")
+                </code>
+                <p>Esto se usa para determinar si la cadena empieza con algo o termina con algo, respectivamente. La primera imprimirá True porque la cadena empieza con "Hola". La segunda imprimirá False porque la cadena no termina con "asdfasdfasdf".</p>
+                <code>
+                    afewwords = astring.split(" ")
+                </code>
+                <p>Esto separa la cadena en un montón de cadenas agrupadas en una lista. Ya que este ejemplo hace una separación con un espacio; el primer elemento en la lista sera "Hola", y el segundo "Mundo!". </p>
+            </article>
+        </section>
+        <section class="main-section" id="Condicionales">
+            <header>Condicionales</header>
+            <article>
+                <p>Python hace uso de variables booleanas para evaluar condiciones. 
+                    Cuando una expresión es comparada o evaluada, los valores que se retornan son falso o verdadero. Por ejemplo:</p>
+                <code>
+                    x = 2<br>
+                    print x == 2 # Imprimira en pantalla TRUE<br>
+                    print x == 3 # Imprimira en pantalla FALSE<br>
+                    print x &lt; 3  # Imprimira en pantalla TRUE
+                </code>
+                <p>Nota: para asignar valores a una variable se utiliza el operador de igualdad "=", mientras que para comparar las variables entre ellas se hace uso de dos signos de igualdad "==". El operador que invierte el valor de comparar dos variables se realiza con  "!="</p>
+                <h3>Operadores boleanos</h3>
+                <p>Los operadores boleanos "y " (and) y "o " (or) permite construir complejas expresiones boleanas, por ejemplo:</p>
+                <code>
+                    name = "John"<br>
+                    age = 23<br>
+                    if name == "John" and age == 23:<br>
+                    &nbsp;"tu nombre es John, y tu tienes 23 años."<br><br>
+                    
+                    if name == "John" or name == "Rick":<br>
+                    &nbsp;print "Tu nombre es John o puede ser Rick."<br>
+                </code>
+                <h3>El operador "in"</h3>
+                <p>El operador "in" puede ser usado para checar si un objeto especifico existe mientras el mismo objeto itera tanto en un contenedor, como en una lista:</p>
+                <code>
+                    if name in ["John", "Rick"]:<br>
+                    &nbsp;print "Su nombre puede ser John or Rick."
+                </code>
+                <p>Python usa la indentacion para definir bloques de código, en lugar de llaves o paréntesis. El estandar de indentacion de python es 4 espacios, aunque el tab y algunos otros espacios funcionará, siempre y cuando sean consistentes, es decir, que tengan el mismo tipo de sangrado (separación). Los bloques de código no necesitan de una terminación.</p>
+                <p>Este es un ejemplo de como usar en python la declaración de la sentencia "if" usando bloques de códigos:</p>
+                <code>
+                    if &lt;declariación a evaluar&gt;:<br>
+                    &nbsp;&lt;líneas de código&gt;<br>
+                    &nbsp;&nbsp;....<br>
+                    &nbsp;&nbsp;....<br>
+                    elseif &lt;alguna otra declaración a evuluar&gt;: # else if<br>
+                    &nbsp;&lt;líneas de código del elseif&gt;<br>
+                    &nbsp;&nbsp;....<br>
+                    &nbsp;&nbsp;....<br>
+                    else:<br>
+                    &nbsp;&lt;código&gt;<br>
+                    &nbsp;&nbsp;....<br>
+                    &nbsp;&nbsp;....<br>
+                </code>
+                <p>Por ejemplo:</p>
+                <code>
+                    x = 2<br>
+                    if x == 2:<br>
+                    &nbsp;print "x igual dos!"<br>
+                    else:<br>
+                    &nbsp;print "x no es igual a dos."
+                </code>
+                <p>Una declaración es evaluada como verdadera, si solo su iteración o flujo es correcta:
+                    - El resultado verdadero de una variable booleana se obtiene, o se calcula utilizando una expresión, como una compración aritmética.
+                    - Un objeto que no es considerado "vacío" hace que continúe el código.</p>
+                <p>Se presenta algunos ejemplos donde los objetos son considerados como vacíos:</p>
+                <ul>
+                    <li>Una Cadena vacia: ""</li>
+                    <li>Una lista vacia: []</li>
+                    <li>El numero cero: 0</li>
+                    <li>La variable boelana falsa: False</li>
+                </ul>
+                <h3>El operador "is"</h3>
+                <p>A diferencia del doble operador de igualdad "==", el operador "is" no iguala solamente los valores de las varialbes, sino los iguala entre ellos. Por ejemplo</p>
+                <code>
+                    x = [1,2,3]<br>
+                    y = [1,2,3]<br>
+                    print x == y # Imprime en pantalla TRUE<br>
+                    print x is y # Imprime en pantalla FALSE
+                </code>
+                <h3>El operador "not"</h3>
+                <p>Usando "not" delante de una expresión booleana se invierte el operador de igualdad:</p>
+                <code>
+                    print not False # Imprime en pantalla TRUE<br>
+                    print (not False) == (False) # Imprime en pantalla FALSE
+                </code>
+            </article>
+        </section>
+        <section class="main-section" id="Bucles">
+            <header>Bucles</header>
+            <article>
+                <p>Hay dos tipos de búcles en Python, "for" y "while".</p>
+                <h3>El bucle "for"</h3>
+                <p>Los bucles For iteran sobre una secuencia. Aquí un ejemplo:</p>
+                <code>
+                    primos = [2,3,5,7]<br>
+                    for prime in primos:<br>
+                    &nbsp;print primos
+                </code>
+                <p>Los bucles pueden iterar sobre una secuencia de números usando las funciones de "range" y "xrange". La diferencia entre rango y range es que la función de rango devuelve una nueva lista con números que el rango especifica, donde xrange devuelve un iterador, el cual es muy eficiente. (Python 3 usa la función range, el cual actúa como xrange). Nota que la función xrange comienza desde el índice cero.</p>
+                <code>
+                    # Muestra todos los números entre 0,1,2,3,4<br>
+                    for x in xrange(5):<br>
+                    &nbsp;print x<br><br>
+
+                    # Muestra 3,4,5<br>
+                    for x in xrange(3,6):<br>
+                    &nbsp;print x
+                </code>
+                <h3>El búcle "while"</h3>
+                <p>Mientras que los búcles While, a diferencia de los For, se repiten tantas veces como se cumpla una condición booleana (operador lógico). Por ejemplo:</p>
+                <code>
+                    # Muestra 0,1,2,3,4<br><br>
+
+                    count = 0<br>
+                    while count &lt; 5:<br>
+                    &nbsp;print count<br>
+                    &nbsp;count += 1  # Esto es lo mismo que escribir:  count = count + 1
+                </code>
+                <h3>Sentencias "break" y "continue"</h3>
+                <p><strong>break</strong> es usado para salir de un búcle o un búcle while, donde <strong>continue</strong> es usado para saltar el bloque actual, y el retorno de las sentencias "for" o "while". Aquí unos ejemplos:</p>
+                <code>
+                    # Muestra 0,1,2,3,4<br><br>
+
+                    count = 0<br>
+                    while True:<br>
+                    &nbsp;print count<br>
+                    &nbsp;count += 1<br>
+                    &nbsp;if count &gt;= 5:<br>
+                    &nbsp;&nbsp;break<br><br>
+
+                    # Muestra solo números impares - 1,3,5,7,9<br>
+                    for x in xrange(10):<br>
+                    &nbsp;# Chequéa si x es numero par<br>
+                    &nbsp;if x % 2 == 0:<br>
+                    &nbsp;&nbsp;continue<br>
+                    &nbsp;print x
+                </code>
+            </article>
+        </section>
+        <section class="main-section" id="Funciones">
+            <header>Funciones</header>
+            <article>
+                <h3>¿Qué son las Funciones?</h3>
+                <p>las funciones son una forma conveniente de dividir tu codigo en útiles bloques, permitiendo que puedas ordenar tu código, hacerlo mas fácil de leer y reutilizarlo para así ahorrar tiempo. <br />
+                Las funciones también son una forma clave para definir interfaces para que los programadores puedan compartir su código.</p>
+                <h3>¿Cómo escribes funciones dentro de Python?</h3>
+                <p>Python hace uso de bloques de código para desarrollarse.</p>
+                <p>Un bloque es un área de código escrito en el siguiente formato:<br></p>
+                <code>
+                    block_head:<br>
+                    the_1st_block_line<br>
+                    the_2nd_block_line<br>
+                    ...
+                </code>
+                <p>Un bloque en una sola línea es simplemente más código Python, y este bloque se describe de la siguiente forma:</p>
+                <code>
+                    block_keyword block_name(argument1,argument2, ...)
+                </code>
+                <p>Las palabras usadas en el código son "if", "for", y "while".</p>
+                <p>Las funciones en Python se definen usando la palabra reservada "def", seguida del nombre de la función como nombre del bloque.<br>
+                Por ejemplo:</p>
+                <code>
+                    def my_function():<br>
+                    &nbsp;print "Hello From My Function!"
+                </code>
+                <p>Las funciones también pueden recibir argumentos (pasar argumentos del que llama la funcion)
+                Por ejemplo:</p>
+                <code>
+                    def my_function_with_args(username, greeting):<br>
+                    &nbsp;print "Hello, %s , From My Function!, I wish you %s"%(username, greeting)
+                </code>
+                <p>La funcion puede regresarse un valor al que llama, usando la palabra reservada de - 'return' .<br>
+                Por ejemplo:</p>
+                <code>
+                    def sum_two_numbers(a, b):<br>
+                    &nbsp;return a + b
+                </code>
+                <h3>¿Cómo llamar a las funciones dentro de Python ?</h3>
+                <p>Simplemente escribe el nombre de la funcion seguida de un (), poniendo cualquier argumento requrido dentro de las llaves {}.<br>
+                Por ejemplo, vamos a llamar a la función siguiente (tomando los ejemplo previos):</p>
+                <code>
+                    my_function() <br>
+                    #print a simple greeting<br><br>
+
+                    my_function_with_args("Or Weis", "a great year!")<br> 
+                    #prints "Hello, Or Weis , From My Function!, I wish you a great year!"<br><br>
+
+                    x = sum_two_numbers(1,2)<br>  
+                    #after this line x will hold the value 3 !<br>
+                </code>
+            </article>
+        </section> 
+        <section class="main-section" id="Clases_y_objetos">
+            <header>Clases y objetos</header>
+            <article> 
+                <p>Los objetos son encapsulamientos de variables y funciones en una entrada única. Los objetos obtienen sus variables y funciones desde las clases; las clases son esencialmente una plantilla para crear tus objetos.</p>
+                <p>Una clase muy básica se verá como esto:</p>
+                <code> 
+                    class MyClass:<br>
+                    &nbsp;variable = "blah"<br>
+                    &nbsp;def function(self):<br>
+                    &nbsp;&nbsp;print "Este mensaje está dentro de una clase."
+                </code>
+                <p>Explicaremos el por qué debes de incluir el "self" como parametro más adelante; primero, para asignar la clase previa (plantilla) a un objeto debes hacer lo siguiente:</p>
+                <code> 
+                    class MyClass:<br>
+                    &nbsp;variable = "blah"<br>
+                    &nbsp;def function(self):<br>
+                    &nbsp;&nbsp;print "Este mensaje está dentro de una clase."<br><br>
+
+                    myobjectx = MyClass()
+                </code>
+                <p>Ahora que la variable "myobjectx" contiene un objeto de la clase "MyClass" que contiene la variable y la función definida dentro de la clase llamada "MyClass".</p>
+                <h3>Accediendo a objetos de variables</h3>
+                <p>Para acceder dentro de la variable del objeto recién creado "myObjectx" se escribe lo siguiente:</p>
+                <code> 
+                    class MyClass:<br>
+                    &nbsp;variable = "blah"<br>
+                    &nbsp;def function(self):<br>
+                    &nbsp;&nbsp;print "Este mensaje está dentro de una clase."<br><br>
+
+                    myobjectx = MyClass()
+
+                    myobjectx.variable
+                </code>
+                <p>El siguiente código de ejemplo imprime la variable "blah":</p>
+                <code> 
+                    class MyClass:<br>
+                    &nbsp;variable = "blah"<br>
+                    &nbsp;def function(self):<br>
+                    &nbsp;&nbsp;print "Este mensaje está dentro de una clase."<br><br>
+
+                    myobjectx = MyClass()<br><br>
+
+                    print(myobjectx.variable)
+                </code>
+                <p>Puedes crear múltiples objetos diferentes que pertenezcan a la misma clase (tengan las mismas variables y funciones ya definidas). Sin embargo, cada objeto contiene copias independientes de las variables definidas en las clases. Por ejemplo, si definimos otro objeto con la clase "MyClass" y después cambiamos la cadena de texto que tenía la variable anterior:</p>
+                <code> 
+                    class MyClass:<br>
+                    &nbsp;variable = "blah"<br>
+                    &nbsp;def function(self):<br>
+                    &nbsp;&nbsp;print("Este mensaje está dentro de una clase.")<br><br>
+
+                    myobjectx = MyClass()<br>
+                    myobjecty = MyClass()<br><br>
+
+                    myobjecty.variable = "yackity"<br><br>
+
+                    # Entonces se imprimen ambos valores<br>
+                    print(myobjectx.variable) # imprime "blah"<br>
+                    print(myobjecty.variable) # imprime "yackity"<br><br>
+
+                    myobjecty = MyClass()<br>
+                    myobjecty.variable = "yackity"
+                </code>
+                <h3>Accediendo a objetos de función</h3>
+                <p>Para acceder a una función dentro del objeto para usar una notación similar a acceder una variable:</p>
+                <code> 
+                    class MyClass:<br>
+                    &nbsp;variable = "blah"<br>
+                    &nbsp;def function(self):<br>
+                    &nbsp;&nbsp;print("Este mensaje está dentro de una clase.")<br><br>
+
+                    myobjectx = MyClass()<br><br>
+
+                    myobjectx.function()
+                </code>
+                <p>La instrucción previa mostrará un mensaje "Este mensaje está dentro de una clase".</p>
+            </article>
+        </section>  
+        <section class="main-section" id="Diccionarios">
+            <header>Diccionarios</header>
+            <article>
+                <p>Un diccionario es un tipo de dato similar a los arreglos, pero trabajan con llaves y valores en vez de índices. Cada valor está almacenado en un diccionario que puede ser accedido usando una llave, el cual es cualquier tipo de objeto (cadena, número, lista, etc) en vez de usar un indice para acceder al mismo.</p>
+                <p>Por ejemplo una base de datos de números de teléfonos puede estar almacenada en un diccionario como este:</p>
+                <code>
+                    librotelefonico = {}<br>
+                    librotelefonico["Juan"] = 938477566<br>
+                    librotelefonico["Juan"] = 938477566<br>
+                    librotelefonico["Jack"] = 938377264<br>
+                    librotelefonico["Jill"] = 947662781
+                </code>
+                <p>De manera alternativa, un diccionario puede ser inicializado con el mismo valor en la anotación siguiente:</p>
+                <code>
+                    librotelefonico = {<br>
+                    "Juan" : 938477566,<br>
+                    "Jack" : 938377264,<br>
+                    "Jill" : 947662781<br>
+                }
+                </code>
+                <h3>Iterando en los diccionarios</h3>
+                <p>Los diccionarios pueden ser iterados de la misma manera que una lista. Sin embargo, en un diccionario no se guardan el orden de los valores almacenados. Para iterar sobre las llaves y valores usa la siguiente sintaxis:</p>
+                <code>
+                    for name, number in librotelefonico.iteritems():<br>
+                        &nbsp;print "Número telefónico de %s esta en %d" % (name, number)
+                </code>
+                <h3>Eliminando valores</h3>
+                <p>Para eliminar el índice específico, usa tanto una como la siguiente notación:</p>
+                <code>
+                    del librotelefonico["Juan"]
+                </code>
+                <p>o:</p>
+                <code>
+                    librotelefonico.pop("Juan")
+                </code>
+            </article>
+        </section>
+        <section class="main-section" id="Referencia">
+            <header>Referencia</header>
+            <article>
+                <ul>
+                    <li>
+                        Toda la documentación en esta página fue tomada de <a href="https://www.learnpython.org/es/" target="_blank">learnpython.org</a>
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+    </main>
+    
+</body>
+</html>
