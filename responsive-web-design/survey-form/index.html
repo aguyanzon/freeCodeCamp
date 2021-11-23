@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title">freeCodeCamp Survey Form</h1>
+            <p id="description">Formulario de encuesta freeCode</p>
+        </header>
+        <div id="forma">
+            <form id="survey-form">
+                <div class="element">
+                    <label id="name-label" for="name">Nombre</label>
+                    <input id="name" type="text" placeholder="Introduzca su nombre" required/>
+                </div>
+                <div class="element">
+                    <label id="email-label" for="email">Email</label>
+                    <input id="email" type="email" placeholder="Introduzca su email" required/>
+                </div>
+                <div class="element">
+                    <label id="number-label" for="number">Edad</label>
+                    <input id="number" type="number" placeholder="Introduzca su edad" min="16" max="70"/>
+                </div>
+                <div class="element">
+                    <label for="dropdown">Seleccione su situación actual:</label>
+                        <select id="dropdown" required>
+                            <option value="empleado">Empleado/a</option> 
+                            <option value="empleador">Empleador/a</option> 
+                            <option value="independiente">Independiente</option>
+                            <option value="desocupado">Desocupado/a</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                </div>
+                <div class="choice-option">
+                    <p>Seleccione su género:</p>
+                    <label>
+                        <input name="genero" type="radio" class="radio-button" value="masculino" checked> 
+                        Masculino
+                    </label>
+                    <label>
+                        <input name="genero" type="radio" class="radio-button" value="femenino">
+                        Femenino
+                    </label>
+                    <label>
+                        <input name="genero" type="radio" class="radio-button" value="otro">
+                        Otro/a
+                    </label>
+                    <label>
+                        <input name="genero" type="radio" class="radio-button" value="no-contesta">
+                        Prefiero no responder
+                    </label>
+                </div>
+                <div class="element">
+                    <label for="estudios" class="caja">Seleccione sus estudios:</label>
+                        <select id="estudios" required>
+                            <option value="primario-completo">Primario completo</option> 
+                            <option value="primario-incompleto">Primario incompleto</option> 
+                            <option value="secundario-completo">Secundario completo</option>
+                            <option value="secundario-incompleto">Secundario incompleto</option>
+                            <option value="universitario-completo">Universitario completo</option>
+                            <option value="universitario-incompleto">Universitario incompleto</option>
+                            <option value="universitario-curso">Universitario en curso</option>
+                            <option value="posgrado">Posgrado</option>
+                        </select>
+                </div>
+                <div class="choice-option">
+                    <p>Seleccione las áreas de su interés:</p>
+                    <label>
+                        <input name="logistica" value="logistica" class="checkbox" type="checkbox"/> 
+                        Logística
+                    </label>
+                    <label>
+                        <input name="supply-chain" value="supply-chain" type="checkbox" class="checkbox"/>
+                        Supply Chain
+                    </label>
+                    <label>
+                        <input name="administracion" value="administracion" type="checkbox" class="checkbox"/>
+                        Administración
+                    </label>
+                    <label>
+                        <input name="calidad" value="calidad" type="checkbox" class="checkbox"/>
+                        Calidad
+                    </label>
+                    <label>
+                        <input name="operaciones" value="operaciones" type="checkbox" class="checkbox"/>
+                        Operaciones
+                    </label>
+                    <label>
+                        <input name="soporte" value="soporte" type="checkbox" class="checkbox"/>
+                        Soporte IT
+                    </label>
+                    <label>
+                        <input name="rrhh" value="rrhh" type="checkbox" class="checkbox"/>
+                        Recursos Humanos
+                    </label>
+                    <label>
+                        <input name="data" value="data" type="checkbox" class="checkbox"/>
+                        Data
+                    </label>
+                </div>
+                <div class="element">
+                    <p>A continuación, puede dejarnos cualquier información suya que considere importante:</p>
+                    <textarea id="comments" class="area-texto" placeholder="Escribe tu comentario..."></textarea>
+                </div>
+                <div class="element">
+                    <button type="submit" id="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(rgba(100, 9, 22, 0.4), rgba(27, 4, 8, 0.4));
+    background-attachment: fixed;
+    font-family: 'Open Sans', sans-serif;
+    font-size: medium;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header h1{
+    text-align: center;
+    display: block;
+    width: 100%;
+    line-height: 1.2;
+    margin-top: 50px;
+    color: #fff;
+    text-shadow: 1px 2px 6px #000;
+}
+
+.header p{
+    display: block;
+    text-align: center;
+    color: #fff;
+    font-style: italic;
+    text-shadow: 1px 2px 6px #000;
+}
+
+#forma{
+    margin: 30px auto;
+    width: 550px;
+    padding: 30px;
+    background-color: rgba(27, 5, 5, 0.582);
+    border-radius: 10px;
+}
+
+@media (max-width: 670px) {
+    #forma {
+        width: 450px;
+       
+    }
+
+    .header h1{
+        font-size: 20px;
+    }
+}
+
+#forma:hover{
+    box-shadow: 0 0 6px #000;
+}
+
+.element label{
+    color: #fff;
+    display: flex;
+    font-weight: bold;
+}
+
+.element input{
+    width: 100%;
+    padding: 10px 0;
+    margin: 10px 0 30px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+.element input:hover{
+    background-color: rgb(239, 239, 239);
+}
+
+.element select{
+    width: 100%;
+    padding: 10px 0;
+    margin: 10px 0 30px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+.choice-option p{
+    color: #fff;
+    margin: 0;
+    font-weight: bold;
+}
+.choice-option label{
+    display: flex;
+    padding: 8px 0;
+    color: #fff;    
+    margin-bottom: 5px;
+}
+.choice-option input{
+    margin-right: 10px;
+    cursor: pointer;
+}
+.element .caja{
+    margin-top: 25px;
+}
+
+.element p{
+    color: #fff;
+    font-weight: bold;
+}
+.area-texto{
+    width: 100%;
+    min-height: 150px;
+    resize: none;
+}
+
+.element button{
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+::placeholder, select{
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: medium;
+}
+
+#submit{
+    background-color: #851e27;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 15px;
+    margin-top: 30px;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+#submit:hover{
+    background-color: #4e1a1e;
+    box-shadow: 0 0 6px #000;
+}
