@@ -1,0 +1,177 @@
+html{
+    height: 100%;
+}
+
+body{
+    width: 80%;
+    margin: 100px auto;
+    box-sizing: border-box;
+    background-color: rgb(243, 243, 243);
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#header{
+    position: fixed;
+    display: flex;
+    margin: -100px auto;
+    background-color: rgba(49, 49, 49, 0.041);
+    width: 80%;
+}
+
+#header-img{
+    height: 60px;
+    width: 170px;
+    display: block;
+    margin: 10px 0 5px 20px;
+    cursor: pointer;
+}
+
+#nav-bar{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav-link{
+    padding: 0 30px;
+    font-weight: bold;
+    color: #1f2044;
+
+}
+
+#container{
+    text-align: center;
+}
+
+#email{
+    padding: 5px 20px;
+}
+
+#submit{
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+#cont-video{
+    display: flex;
+    padding: 25px 0;
+    justify-content: center;
+}
+
+.bloques{
+    display: flex;
+    justify-content: center;
+    flex-direction: row; 
+    margin-bottom: 50px;
+}
+
+.caja{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    width: calc(100%/4);
+    margin: 0 10px;
+    border: 2px solid #000;
+    box-shadow: 10px 10px  #1f20442f;
+}
+
+.caja ul{
+    display: block;
+    text-align: left;
+}
+
+.caja .level{
+    padding: 15px 0;
+    color: #fff;
+    font-weight: bold;
+    font-size: 25px;
+    background-color: #1f2044;
+}
+
+.caja h2{
+    margin-bottom: 0;
+}
+
+.caja .button{
+    display: block;
+    width: 65%;
+    padding: 15px 40px;
+    margin: 10px auto;
+    cursor: pointer;
+    background-color: #ff9144;
+    color: #1f2044;
+    font-size: large;
+    font-weight: bold;
+    box-shadow: inset -4px -4px 0 0 #1f2044;
+}
+
+.caja .button:hover{
+    padding-right: 43px;
+    padding-bottom: 18px;
+    box-shadow: none;
+    transition: all 0.2s;
+    background-color: #ffcf00;
+}
+
+
+.footer{
+    background-color: rgba(128, 128, 128, 0.39);
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+ul{
+    display: flex;
+    justify-content: flex-end;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+    display: list-item;
+    padding: 10px 20px 0 10px;  
+}
+
+.footer #span{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+@media (max-width: 960px){
+    .bloques{
+        flex-direction: column;
+    }
+
+    .caja{
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 680px){
+
+    #header-img{
+        display: none;
+    }
+   
+    #nav-bar{
+        width: 100%;
+    }
+
+    #submit{
+        margin: 10px;
+    }
+
+    .caja{
+        margin-bottom: 40px;
+    }
+
+}
